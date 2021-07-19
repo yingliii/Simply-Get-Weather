@@ -5,8 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Weather Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="text-center text-white p-5" style="background-color: rgb(79, 105, 79)">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="search-col col-12 col-md-3 p-1">
+                <p class="search-text">Search for a city...</p>
+                <div class="input-box">
+                    <input type="text" id="city-input" placeholder="Enter city name here...">
+                    <button id="search-btn" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="history"></div>
+            </div>
+            <div class="col-12 col-md-9">
+                <div id="current-forecast-container">
+                    <h2 id="current-city">Location(MM/DD/YYYY)ICON</h2>
+                    <img id="weather-icon" src="#"></img>
+                    <div id="current-city-container">
+                        <ul>
+                            <li id="temperature">Temp</li>
+                            <li id="wind-speed">Wind</li>
+                            <li id="humidity">Humid</li>
+                            <li id="UV-index">UV</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="five-day-forecast-container">
+                    <h2 id="five-day-forecast">5-Day Forecast:</h2>
+                    <div id="five-day-container"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
